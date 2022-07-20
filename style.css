@@ -35,7 +35,7 @@ second part
 ------------ */
 .second-part{
     /* max-height: 150px; */
-    max-width: 200px;
+    /* max-width: 200px; */
     border-radius: 5px;
     
     margin-top: 7%;
@@ -64,7 +64,7 @@ second part
    border: 1px solid gray;
    border-radius: 10px;
 
-  
+  padding: 20px;
     
 }
 
@@ -78,17 +78,22 @@ second part
     margin-left:5%;
 }
 
- hr{
-
- }  
+  
 
 footer {
 
     background-color: black;
-    height: 150px;
+    height: 100%;
+
+}
+hr{
+    background-image: linear-gradient(red,salmon);
+    border: 0;
+    height: 1px;
+    width: 90%;
 }
 a{
-    margin-left: 10%;
+    margin-left: 8%;
     text-decoration: none;
     color: white;
 }
@@ -97,30 +102,71 @@ a{
     text-align: center;
     padding-top: 30px;
 }
+.extra{
+    font-weight: 600;
+    color: black;
+    background-color: burlywood;
+  margin-left: 35%;
+  padding: 30px;
+ visibility: hidden;
+}
 /*For Mobile*/
 @media  screen and (max-width:576px) {
     .container{
        grid-template-columns: repeat(1, 1fr);
-       
+      
     }
+    .first-part{
+        flex-direction: column;
+    }
+    .enter{
+        width:300px ;
+        margin: 20px;
+    }
+    .footer-div{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    .second-part{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
 }
 /*For Tablet*/
 @media screen and (min-width:577px) and (max-width:992px) {
     .container{
         grid-template-columns: repeat(2, 1fr);
     }
+    .extra{
+        visibility: visible;
+       position: relative;
+       bottom: 20px;
+left: 30px;
+    }
+    .second-part{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
 }
 body{
     margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+
+}
+.icon-1{
+    font-size: 30px;
+   
 }
 /* -------
 new website
 ----------- */
-.flag{
-    display: flex;
-}
+
 .matchbox{
-    position: relative;
+    display: flex;
     
 }
 .text{
